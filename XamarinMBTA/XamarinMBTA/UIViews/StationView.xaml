@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinMBTA.Views.StationView">
+    <ContentView.Content>
+        <StackLayout Orientation="Horizontal">
+            <Image Aspect="AspectFit" 
+                       x:Name="imageicon" 
+                       HeightRequest="40"
+                       Source="SUBWAY.png"/>
+
+            <Label x:Name="stationlabel" WidthRequest="160" TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="18"/>
+       </StackLayout>
+  </ContentView.Content>
+</ContentView>

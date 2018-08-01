@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinMBTA.Pages.LineSchedulePage"
+             xmlns:vm="clr-namespace:XamarinMBTA.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:LineScheduleViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+
+            <StackLayout
+                VerticalOptions="Fill">
+                
+                
+                <ActivityIndicator x:Name="indicatorLoader"
+                                BackgroundColor="Transparent"
+                                   Opacity="0.3"
+                                IsRunning="{Binding IsBusy}"
+                                IsVisible="{Binding IsBusy}"
+                                VerticalOptions="CenterAndExpand"
+                                Color="#607D8B" />
+                
+                <Grid
+                    Margin="0, 30, 0, 0"
+                    HeightRequest="40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Schedules for "
+                           Grid.Column="0"
+                           TextColor="#3F51B5"
+                           FontSize="18"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"/>
+                    <DatePicker x:Name="ScheduleDatePicker"
+                                Grid.Column="1"
+                                Format="yyyy-MM-dd"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"
+                                WidthRequest="120"
+                            />
+
+
+                    <Frame
+                        Padding="0, 0, 0, 0"
+                        Grid.Column="2"
+                        BackgroundColor="{Binding LineColor}"
+                        HorizontalOptions="Center"
+                        WidthRequest="65"
+                        HeightRequest="30"
+                        VerticalOptions="FillAndExpand">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLineTagTapped"/>
+                        </Frame.GestureRecognizers>
+                        <Label 
+                            x:Name="ScheduleLineTag"
+                            Text="{Binding LineCode}"
+                            TextColor="White"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </Grid>
+
+                <!--Direction filter-->
+                <Grid
+                    Margin="0, 15, 0, 0"
+                    HeightRequest="40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Direction"
+                           Grid.Column="0"
+                           TextColor="#3F51B5"
+                           FontSize="18"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="End"/>
+                    <Label x:Name="ScheduleDirectionLabel"
+                           Text="{Binding RouteDirection.dir_str}"
+                           Grid.Column="1"
+                           TextColor="DarkGray"
+                           FontSize="20"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"/>
+                </Grid>
+
+                <!--Departing from-->
+                <Grid
+                    Margin="0, 15, 0, 0"
+                    HeightRequest="40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Departing from"
+                           Grid.Column="0"
+                           TextColor="#3F51B5"
+                           FontSize="18"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="End"/>
+                    <Picker x:Name="ScheduleDeparturePicker"
+                            ItemsSource="{Binding StationList}"
+                        Grid.Column="1"
+                        Title="Tap to select"
+                        HorizontalOptions="Start"
+                        WidthRequest="160"
+                        VerticalOptions="Center"/>
+                </Grid>
+
+                <!--Arriving at-->
+                <Grid
+                    Margin="0, 15, 0, 0"
+                    HeightRequest="40">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Arriving at"
+                           Grid.Column="0"
+                           TextColor="#3F51B5"
+                           FontSize="18"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="End"/>
+                    <Picker x:Name="ScheduleArrivalPicker"
+                            ItemsSource="{Binding StationList}"
+                        Grid.Column="1"
+                        Title="Tap to select"
+                        WidthRequest="160"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"/>
+                </Grid>
+
+                <!--listView-->
+                <Frame
+                    Padding="0, 0, 0, 0"
+                    BackgroundColor="#434862"
+                    HeightRequest="45"
+                    Margin="5, 0, 5, 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Departure"
+                               Grid.Column="0"
+                               TextColor="White"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                        <Label Text="Arrival"
+                               Grid.Column="1"
+                               TextColor="White"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
+                    </Grid>
+                </Frame>
+
+                <ListView x:Name="ScheduleListView"
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand"
+                              RowHeight="90">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Padding="0, 0, 0, 0"
+                                           BorderColor="LightGray">
+                                    <Grid
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="Center">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout
+                                                Grid.Column="0"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="CenterAndExpand">
+                                            <Label
+                                                x:Name="DepartureTimeLabel"
+                                                Text="{Binding DepartingTime}"
+                                                FontSize="28"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center"
+                                                HorizontalTextAlignment="Center"
+                                                VerticalTextAlignment="End"
+                                                TextColor="#2A3FB7"/>
+                                            <Label Text="LIVE"
+                                                       Margin="0, -10, 0, 0"
+                                                       FontSize="17"
+                                                       TextColor="#5062C6"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalTextAlignment="Center"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"/>
+
+                                        </StackLayout>
+
+                                        <StackLayout
+                                                Grid.Column="1"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="CenterAndExpand">
+                                            <Label Text="{Binding ArriveTime}"
+                                                       x:Name="ArrivalTimeLabel"
+                                                       FontSize="28"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalTextAlignment="End"
+                                                       TextColor="#2A3FB7"/>
+                                            <Label Text="LIVE"
+                                                       Margin="0, -10, 0, 0"
+                                                       FontSize="17"
+                                                       TextColor="#5062C6"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalTextAlignment="Center"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"/>
+
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Frame
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    Padding="0, 0, 0, 0"
+                    BackgroundColor="#434862"
+                    HeightRequest="45"
+                    Margin="5, 15, 5, 0">
+                    <Label Text="Hours and Frequencies"
+                            TextColor="White"
+                            FontSize="18"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

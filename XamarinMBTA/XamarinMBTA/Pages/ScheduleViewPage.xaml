@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinMBTA.Pages"
+             x:Class="XamarinMBTA.Pages.ScheduleViewPage">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Name="ScheduleAdd" Text="Add"/>
+    </TabbedPage.ToolbarItems>
+    <local:UpcomingSchedulePage Title="Upcoming(2)"/>
+</TabbedPage>

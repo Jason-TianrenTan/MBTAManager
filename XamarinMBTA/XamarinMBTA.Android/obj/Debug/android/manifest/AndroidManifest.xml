@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.chidori.XamarinMBTA">
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27" />
+  <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <!-- We need to be able to download map tiles and access Google Play Services-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- Allow the application to access Google web-based services. -->
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+  <!-- Google Maps for Android v2 will cache map tiles on external storage -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- Google Maps for Android v2 needs this permission so that it may check the connection state as it must download data -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!-- Permission to receive remote notifications from Google Play Services -->
+  <!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
+  <uses-permission android:name="com.chidori.XamarinMBTA.permission.MAPS_RECEIVE" />
+  <permission android:name="com.chidori.XamarinMBTA.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+  <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="XamarinMBTA.Android" android:theme="@style/MainTheme" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
+    <!-- Put your Google Maps V2 API Key here. -->
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyB0bHN-sZg_J9721Gb1VUjhpdDeu30bQxA" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="XamarinMBTA" android:theme="@style/MainTheme" android:name="md5c98f5a508bf5aa43d66b1ef3d3925f6e.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.BatteryBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.ConnectivityBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Essentials Power Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.PowerBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.chidori.XamarinMBTA.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.chidori.XamarinMBTA" />
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+  </application>
+</manifest>

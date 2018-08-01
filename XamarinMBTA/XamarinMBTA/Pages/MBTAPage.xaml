@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinMBTA.Views"
+             xmlns:vm="clr-namespace:XamarinMBTA.ViewModels"
+             x:Class="XamarinMBTA.Pages.MBTAPage">
+    <ContentPage.BindingContext>
+        <vm:MBTAViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+            <StackLayout
+                x:Name="MBTAStack"
+                VerticalOptions="Fill">
+                <SearchBar
+                    Placeholder="Enter keyword"
+                    VerticalOptions="Start"/>
+
+                <Frame Padding="5,5,5,5"
+                       Margin="5,0,5,0"
+                       BorderColor="DarkGray">
+                    <StackLayout Orientation="Vertical"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand">
+                        <Grid
+                            HeightRequest="50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                       Text="Recent Trips"
+                                       FontSize="Medium"
+                                       TextColor="Black"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"/>
+                            <Label Grid.Column="1"
+                                    Text="2018-07-23 08:24A"
+                                    Margin="60,0,0,0"
+                                    FontSize="Small"
+                                    TextColor="Gray"
+                                    VerticalTextAlignment="Center"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Center"/>
+                            <Image Grid.Column="2"
+                                       Source="refresh.png"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End"
+                                       Aspect="AspectFit"
+                                       x:Name="RecentRefresh"/>
+                        </Grid>
+
+                        <Frame
+                                HorizontalOptions="FillAndExpand"
+                                HeightRequest="45"
+                                BackgroundColor="Red"
+                                Margin="-2,0,0,0">
+                            <Grid x:Name="RecentGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="4*" />
+                                </Grid.ColumnDefinitions>
+                                <local:StationView Grid.Column="0" HorizontalOptions="FillAndExpand"
+                                                       VerticalOptions="Center" x:Name="FromStationView"/>
+                                <Label
+                                        Text="TO"
+                                        FontSize="16"
+                                        TextColor="DarkGray"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center"
+                                        Grid.Column="1"/>
+                                <local:StationView Grid.Column="2" 
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="FillAndExpand" x:Name="DestStationView"/>
+
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
+                <!--Upcoming Schedules-->
+                <Frame 
+                    Margin="5,0,5,0"
+                    Padding="5,5,5,5"
+                       BorderColor="DarkGray">
+                    <StackLayout>
+                        <Grid VerticalOptions="Center"
+                              HeightRequest="30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Upcoming Schedules"
+                               FontSize="Medium"
+                               TextColor="Black"
+                               VerticalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="FillAndExpand"/>
+                            <Image x:Name="ScheduleAdd" Grid.Column="1" Source="plus.png" HeightRequest="30"
+                               Aspect="AspectFit"
+                               VerticalOptions="Center"
+                               HorizontalOptions="End"/>
+                        </Grid>
+
+                        <BoxView HeightRequest="1" Color="LightGray"/>
+
+                        <Grid HeightRequest="80">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnScheduleTapped"/>
+                            </Grid.GestureRecognizers>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Vertical"
+                                         HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="CenterAndExpand"
+                                         Grid.Column="0">
+                                <Label
+                                   x:Name="UpcomingScheduleLabel"
+                                   Text="Go to Charlie's"
+                                   Margin="10, 0, 0, 0"
+                                   FontSize="20"
+                                   TextColor="Black"
+                                   VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalOptions="FillAndExpand"/>
+                                <Label
+                                   Text="2018-07-24 12:07A" TextColor="LightGreen"
+                                   FontSize="14"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                            <Label x:Name="TimeLeftLabel" Grid.Column="1" Text="~12 minutes left" HeightRequest="30"
+                                TextColor="Red"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Start"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start"/>
+                            <Image 
+                                Grid.Column="2"
+                                Margin="0, 0, 20, 0"
+                                Source="right_arrow.png"
+                                HeightRequest="30"
+                                VerticalOptions="Center"
+                                HorizontalOptions="End"/>
+                        </Grid>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    Margin="5,0,5,0"
+                    Padding="5,5,5,5"
+                       BorderColor="DarkGray">
+                    <StackLayout>
+                        <!--Alert header-->
+                        <Grid VerticalOptions="Center"
+                              HeightRequest="30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Horizontal"
+                                     Grid.Column="0"
+                                     Margin="10, 0, 0, 0"
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="Start">
+                                <Image Source="alert.png"
+                                   HeightRequest="30"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Start"
+                               />
+                                <Label Text="{Binding AlertCountLabel}"
+                                   FontSize="Medium"
+                                   TextColor="Black"
+                                   VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <Label Grid.Column="1"
+                               x:Name="AlertsViewMore"
+                               Text="+View More"
+                               FontSize="Medium"
+                               TextColor="#009688"
+                               HorizontalOptions="End"
+                               VerticalOptions="Center"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnAlertsViewMoreTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                        </Grid>
+
+                        <BoxView HeightRequest="1" Color="LightGray"/>
+
+                        
+                        <!--Alert Date and Line-->
+                        <Frame HorizontalOptions="FillAndExpand"
+                               BorderColor="White"
+                               Padding="0, 0, 0, 0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnAlertContentTapped"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout>
+                                <Grid VerticalOptions="Center"
+                                        HeightRequest="30">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label 
+                                        Grid.Column="0"
+                                        Margin="20, 0, 0, 0"
+                                        Text="{Binding AlertTime}"
+                                        FontSize="Medium"
+                                        TextColor="Red"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center"/>
+                                    <Label 
+                                       Grid.Column="1"
+                                       Margin="0, 0, 20, 0"
+                                       Text="{Binding RouteLabel}"
+                                       FontSize="16"
+                                       TextColor="Black"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                </Grid>
+
+                                <Label 
+                                    Text="{Binding AlertTitle}"
+                                    Margin="20, 0, 0, 0"
+                                    FontSize="20"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"/>
+
+                                <Label
+                                    Text="{Binding AlertHeader}"
+                                    Margin="20, 0, 0, 20"
+                                    FontSize="18"
+                                    TextColor="Black"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    LineBreakMode="CharacterWrap"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+                
+                <!--My MBTA-->
+                <Frame
+                    Margin="5,0,0,0"
+                    Padding="5,5,5,5"
+                       BorderColor="DarkGray">
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand">
+                        <Grid VerticalOptions="Center"
+                              HeightRequest="30">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Text="My MBTA"
+                                   TextColor="Black"
+                                   FontSize="Medium"
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   Margin="20,0,0,0"/>
+
+                            <StackLayout Grid.Column="1"
+                                         Orientation="Horizontal"
+                                         Margin="0, 0, 20, 0"
+                                         VerticalOptions="Center"
+                                         HorizontalOptions="End">
+                                <Label Text="Total"
+                                       x:Name="MyMBTATotal"
+                                       FontSize="Small"
+                                       TextColor="Blue"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                <Label Text="Monthly"
+                                       x:Name="MyMBTAMonthly"
+                                       FontSize="Small"
+                                       TextColor="DimGray"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                <Label Text="Yearly"
+                                       x:Name="MyMBTAYearly"
+                                       FontSize="Small"
+                                       TextColor="DimGray"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Grid>
+                        <BoxView HeightRequest="1" Color="LightGray"/>
+                        
+                        <!--Statistics-->
+                        <Grid VerticalOptions="FillAndExpand"
+                              HeightRequest="80">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--Total trips-->
+                            <StackLayout Grid.Column="0"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center">
+                                <Label 
+                                       x:Name="TotalTripsLabel"
+                                       Text="140"
+                                       FontSize="28"
+                                       TextColor="Black"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                <Label Text="Total trips"
+                                       FontSize="16"
+                                       TextColor="Gray"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <!--Hours-->
+                            <StackLayout Grid.Column="1"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center">
+                                <Label x:Name="HoursLabel"
+                                       Text="1896"
+                                       FontSize="28"
+                                       TextColor="Black"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                <Label Text="Hours"
+                                       FontSize="18"
+                                       TextColor="Gray"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+
+                            <!--Favorite line-->
+                            <StackLayout Grid.Column="2"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center">
+                                <Label x:Name="FavoriteLineLabel"
+                                       Text="Red"
+                                       FontSize="24"
+                                       TextColor="Red"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                                <Label Text="Total trips"
+                                       FontSize="16"
+                                       TextColor="Gray"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

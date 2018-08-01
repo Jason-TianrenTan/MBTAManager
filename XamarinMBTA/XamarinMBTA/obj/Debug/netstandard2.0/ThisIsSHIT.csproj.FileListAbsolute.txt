@@ -1,0 +1,14 @@
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\bin\Debug\netstandard2.0\ThisIsSHIT.deps.json
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\bin\Debug\netstandard2.0\ThisIsSHIT.dll
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\bin\Debug\netstandard2.0\ThisIsSHIT.pdb
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\Pages\MBTAPage.xaml.g.cs
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\ThisIsSHIT.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\ThisIsSHIT.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\ThisIsSHIT.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\ThisIsSHIT.dll
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\ThisIsSHIT.pdb
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\ThisIsSHIT.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\ThisIsSHIT\ThisIsSHIT\ThisIsSHIT\obj\Debug\netstandard2.0\UIViews\StationView.xaml.g.cs

@@ -1,0 +1,1 @@
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\XamarinMBTA.UWP.csproj;x86

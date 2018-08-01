@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinMBTA.Pages.UpcomingSchedulePage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+                <Frame
+                    CornerRadius="5"
+                    Margin="5, 10, 5, 0"
+                    Padding="0, 0, 0, 0"
+                    BorderColor="Gray"
+                    HorizontalOptions="FillAndExpand">
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Grid HeightRequest="40"
+                              HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.6*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1.2*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   Margin="10, 0, 0, 0"
+                                x:Name="UpcomingScheduleNameLabel"
+                                Text="Go to Charlie's"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                                FontSize="20"
+                                HorizontalOptions="StartAndExpand"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"/>
+                            <Label 
+                                Grid.Column="1"
+                                x:Name="UpcomingDistanceLabel"
+                                    Text="1.9km"
+                                    TextColor="Gray"
+                                    FontSize="16"
+                                    Margin="5, 0, 0, 0"
+                                    VerticalOptions="Center"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"/>
+
+                            <Label Grid.Column="2"
+                                x:Name="UpcomingRemainTimeLabel"
+                                   Text="~12 minutes left"
+                                   FontSize="16"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   HorizontalTextAlignment="End"
+                                   VerticalTextAlignment="Center"
+                                   TextColor="#E51C23"/>
+                            
+                        </Grid>
+                        <Label 
+                            x:Name="UpcomingScheduleTimeLabel"
+                            Text="2018-07-23 9:00AM"
+                               TextColor="#009688"
+                               Margin="10, 0, 0, 0"
+                               FontSize="16"
+                               HorizontalTextAlignment="Start"
+                               VerticalTextAlignment="Center"
+                               HorizontalOptions="StartAndExpand"/>
+                        <maps:Map x:Name="ScheduleMap"
+                                  HorizontalOptions="FillAndExpand"
+                                  Margin="5, 0, 5, 0"
+                                  HeightRequest="450"/>
+                        
+                        
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
