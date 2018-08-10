@@ -32,6 +32,7 @@ namespace XamarinMBTA.Pages
                     //argument: long name of route
                     viewModel.updateStations(arg);
                     BindingContext = viewModel;
+                    ScheduleDirectionLabel.Text = viewModel.RouteDirection.dir_str;
                 });
 
             ScheduleDeparturePicker.ItemsSource = viewModel.StationList;

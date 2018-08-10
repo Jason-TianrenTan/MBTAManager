@@ -8,6 +8,8 @@ using XamarinMBTA.Schedules;
 using XamarinMBTA.Stops;
 using XamarinMBTA.Vehicle;
 using System.Threading;
+using XamarinMBTA.Performance;
+
 namespace XamarinMBTA.Globals
 {
     public class Database
@@ -25,6 +27,7 @@ namespace XamarinMBTA.Globals
         public static List<Prediction> predictionList = new List<Prediction>();
         public static List<VehicleInfo> vehicleList = new List<VehicleInfo>();
         public static List<Alert> alertList = new List<Alert>();
+        public static Dictionary<string, List<DailyAccuracyModel>> RouteAccuracyMap = new Dictionary<string, List<DailyAccuracyModel>>();
 
         public static Dictionary<string, string> routeAbrevMap= new Dictionary<string, string>()
             {
@@ -69,5 +72,7 @@ namespace XamarinMBTA.Globals
         public static Dictionary<string, int> routeID_typeMap = new Dictionary<string, int>();
 
         public static Dictionary<string, int> routeAlertCountMap = new Dictionary<string, int>();
+
+        public static List<DailyAccuracyModel> currentAccModel = new List<DailyAccuracyModel>();
     }
 }

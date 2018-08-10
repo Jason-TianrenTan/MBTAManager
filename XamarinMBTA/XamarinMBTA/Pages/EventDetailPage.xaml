@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinMBTA.Pages.EventDetailPage"
+             xmlns:vm="clr-namespace:XamarinMBTA.ViewModels"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             >
+
+    <ContentPage.Content>
+        <Grid x:Name="MainLayout">
+            <maps:Map x:Name="EventDetailMap"
+                                  HorizontalOptions="FillAndExpand"
+                                  Margin="5, 0, 5, 0"/>
+            
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="End"
+                         Spacing="0"
+                         x:Name="QuickMenuPullLayout">
+
+                <Grid x:Name="QuickMenuLayout">
+                    <StackLayout BackgroundColor="#39DBE6" Opacity="0.8"></StackLayout>
+                    <Frame 
+                        x:Name="QuickMenuInnerLayout"
+                        HorizontalOptions="FillAndExpand"
+                           VerticalOptions="End">
+                        <Label Text="Directions"
+                               FontAttributes="Bold"
+                               FontSize="24"/>
+                    </Frame>
+                </Grid>
+
+                <Grid x:Name="Notification"  HeightRequest="200">
+                    <StackLayout BackgroundColor="Black" Opacity="0.3"></StackLayout>
+
+                    <ScrollView BackgroundColor="White">
+                        <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         BackgroundColor="White"
+                         Margin="10, 0, 10, 0">
+
+
+                            <Grid Margin="10, 0, 10, 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding EventTitle}"
+                           Grid.Column="0"
+                           FontSize="26"
+                           TextColor="Black"
+                           HorizontalOptions="Start"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           VerticalOptions="Center"/>
+
+                                <Label Text="{Binding EventTime}"
+                           Grid.Column="1"
+                       FontSize="20"
+                       TextColor="#23A498"
+                       Margin="10, 0, 0, 0"
+                       HorizontalTextAlignment="Start"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       VerticalTextAlignment="Center"/>
+                            </Grid>
+
+                            <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand"
+                             HeightRequest="40"
+                                         Margin="10, 0, 10, 0">
+                                <Label Text="Time Remaining: "
+                           TextColor="#E51C23"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           WidthRequest="160"/>
+                                <Label Text="{Binding RemainingTime}"
+                           FontSize="20"
+                           TextColor="#E51C23"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="FillAndExpand"
+                             HeightRequest="40"
+                                         Margin="10, 0, 10, 0">
+                                <Label Text="Time Needed: "
+                           TextColor="#2640DA"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           WidthRequest="160"/>
+                                <Label Text="{Binding RequiredTime}"
+                           FontSize="20"
+                           TextColor="#2640DA"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <BoxView Color="DarkGray" HeightRequest="1"/>
+
+                            <Frame
+                    Padding="0, 0, 0, 0"
+                    BackgroundColor="#434862"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5, 0, 5, 0">
+                                <Label Text="Directions"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                            </Frame>
+                            <ListView
+                    x:Name="StepList"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    RowHeight="200">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Frame Padding="0, 0, 0, 0"
+                                       CornerRadius="5"
+                                       BorderColor="Gray"
+                                       Margin="5, 10, 5, 10">
+                                                <StackLayout HorizontalOptions="FillAndExpand"
+                                                 VerticalOptions="FillAndExpand"
+                                                 Margin="10, 0, 10, 0">
+                                                    <Grid Margin="0, 20, 0, 0">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="2*" />
+                                                            <ColumnDefinition Width="1*" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Text="{Binding stepDescription}"
+                                                   HeightRequest="80"
+                                                   Grid.Column="0"
+                                                   TextColor="Black"
+                                                   Margin="10, 0, 0, 0"
+                                                   HorizontalTextAlignment="Start"
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalOptions="Start"
+                                                   FontSize="18"/>
+
+                                                        <Frame Grid.Column="1"
+                                                   WidthRequest="120"
+                                                   Padding="0, 0, 0, 0"
+                                                   BackgroundColor="{Binding LineColor}"
+                                                   HorizontalOptions="End"
+                                                   VerticalOptions="Center"
+                                                   Margin="0, 0, 10, 0">
+                                                            <Label
+                                                    Text="{Binding LineCode}"
+                                                    TextColor="White"
+                                                    FontSize="22"
+                                                    HorizontalTextAlignment="Center"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"/>
+                                                        </Frame>
+                                                    </Grid>
+
+                                                    <StackLayout Orientation="Horizontal"
+                                                     HeightRequest="50"
+                                                     Margin="10, 0, 0, 0">
+                                                        <Label Text="Estimated Duration:"
+                                                   TextColor="#3F51B5"
+                                                   FontSize="18"
+                                                   HorizontalOptions="End"
+                                                   WidthRequest="160"
+                                                   HorizontalTextAlignment="Start"
+                                                   VerticalTextAlignment="Center"
+                                                   VerticalOptions="Center"/>
+
+                                                        <Label Text="{Binding duration}"
+                                               TextColor="#3F51B5"
+                                               FontSize="18"
+                                               HorizontalOptions="Center"
+                                               VerticalTextAlignment="Center"
+                                               HorizontalTextAlignment="Center"/>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Horizontal"
+                                                     HeightRequest="50"
+                                                     Margin="10, 0, 0, 0">
+                                                        <Label Text="Estimated Distance:"
+                                                   TextColor="#3F51B5"
+                                                   FontSize="18"
+                                                   HorizontalOptions="End"
+                                                   WidthRequest="160"
+                                                   HorizontalTextAlignment="Start"
+                                                   VerticalTextAlignment="Center"
+                                                   VerticalOptions="Center"/>
+                                                        <Label Text="{Binding distance}"
+                                               TextColor="#FF5C33"
+                                               FontSize="18"
+                                               HorizontalOptions="Center"
+                                               VerticalTextAlignment="Center"
+                                               HorizontalTextAlignment="Center"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </Frame>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
+                            <Frame
+                    Padding="0, 0, 0, 0"
+                    BackgroundColor="#434862"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="5, 0, 5, 0">
+                                <Label Text="Statistics"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontSize="20"/>
+                            </Frame>
+                            <ListView
+                    x:Name="AccuracyList"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    RowHeight="350">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Frame Padding="0, 0, 0, 0"
+                                       CornerRadius="5"
+                                       BorderColor="Gray"
+                                       Margin="5, 10, 5, 10">
+                                                <StackLayout HorizontalOptions="FillAndExpand"
+                                                 VerticalOptions="FillAndExpand"
+                                                 Margin="10, 0, 0, 0">
+                                                    <Frame
+                                                   WidthRequest="120"
+                                                   Padding="0, 0, 0, 0"
+                                                   BackgroundColor="{Binding LineColor}"
+                                                   HorizontalOptions="Start"
+                                                   VerticalOptions="Center"
+                                                   Margin="10, 0, 10, 0">
+                                                        <Label
+                                                    Text="{Binding LineCode}"
+                                                    TextColor="White"
+                                                    FontSize="22"
+                                                    HorizontalTextAlignment="Center"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"/>
+                                                    </Frame>
+
+                                                    <Label Text="Accuracy"
+                                               TextColor="Black"
+                                               FontSize="24"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="20, 0, 0, 0"/>
+
+                                                    <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     HeightRequest="50">
+                                                        <Label Text="Minimum Error:"
+                                               TextColor="Black"
+                                               FontSize="20"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="10, 0, 0, 0"/>
+
+                                                        <Label Text="{Binding MinErr}"
+                                               TextColor="Black"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="10, 0, 0, 0"/>
+
+                                                    </StackLayout>
+
+                                                    <StackLayout 
+                                            Margin="0, -15, 0, 0"
+                                            Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     HeightRequest="50">
+                                                        <Label Text="Maximum Error:"
+                                               TextColor="Black"
+                                               FontSize="20"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="10, 0, 0, 0"/>
+
+                                                        <Label Text="{Binding MaxErr}"
+                                               TextColor="Black"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="10, 0, 0, 0"/>
+
+                                                    </StackLayout>
+
+                                                    <StackLayout 
+                                            Margin="0, -15, 0, 0"
+                                            Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     HeightRequest="50">
+                                                        <Label Text="Average Error:"
+                                               TextColor="Black"
+                                               FontSize="20"
+                                               HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="10, 0, 0, 0"/>
+
+                                                        <Label Text="{Binding AverErr}"
+                                               TextColor="Black"
+                                               FontSize="20"
+                                               HorizontalOptions="Center"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="10, 0, 0, 0"/>
+
+                                                    </StackLayout>
+
+                                                </StackLayout>
+                                            </Frame>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+
+                        </StackLayout>
+                    </ScrollView>
+
+                </Grid>
+
+
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
+    

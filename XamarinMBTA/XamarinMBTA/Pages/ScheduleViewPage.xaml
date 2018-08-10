@@ -7,4 +7,5 @@
         <ToolbarItem Name="ScheduleAdd" Text="Add"/>
     </TabbedPage.ToolbarItems>
     <local:UpcomingSchedulePage Title="Upcoming(2)"/>
+    <local:DisplayPDFPage Title="MBTA Map"/>
 </TabbedPage>

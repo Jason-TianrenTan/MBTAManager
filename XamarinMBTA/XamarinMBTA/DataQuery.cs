@@ -4,8 +4,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Xamarin.Forms.GoogleMaps;
 using XamarinMBTA.Alerts;
+using XamarinMBTA.Directions;
 using XamarinMBTA.Globals;
+using XamarinMBTA.Performance;
 using XamarinMBTA.Predictions;
 using XamarinMBTA.Routes;
 using XamarinMBTA.Schedules;
@@ -193,6 +196,79 @@ namespace XamarinMBTA
             AlertInfo alertInfo = JsonConvert.DeserializeObject<AlertInfo>(response);
             AlertData alertData = alertInfo.data;
             return alertData;
+        }
+
+
+        public async static Task<GoogleRoute> getDirections(Position Start, Position Target)
+        {
+            string url = @"https://maps.googleapis.com/maps/" +
+                @"api/directions/json?origin=" + Start.Latitude + "," + Start.Longitude + 
+                @"&destination=" + Target.Latitude + "," + Target.Longitude +
+                @"&mode=transit" +
+                @"&transit_mode=subway|train|bus&key=" + Configs.GOOGLE_MAP_API_KEY;
+            string response = await DataFetcher.fetchData(url);
+            DirectionBundle directionBundle = JsonConvert.DeserializeObject<DirectionBundle>(response);
+            return directionBundle.routes[0];
+        }
+
+        
+        public async static Task<List<DailyAccuracyModel>> getPredictionAccuracy(string routeID)
+        {
+            if (Database.RouteAccuracyMap.ContainsKey(routeID))
+                return Database.RouteAccuracyMap[routeID];
+            string url = @"http://realtime.mbta.com/developer/api/v2.1/dailypredictionmetrics?api_key=" + 
+                Configs.MBTA_API_KEY + @"&format=json&route=" + routeID + @"&from_service_date=" +
+                DateTime.Now.AddDays(-10).ToString("yyyy-MM-dd") + @"&to_service_date=" + DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
+            string response = await DataFetcher.fetchData(url);
+            PerformanceAccuracyBundle pAB = JsonConvert.DeserializeObject<PerformanceAccuracyBundle>(response);
+            List<DailyAccuracyModel> DailyAccuracy = new List<DailyAccuracyModel>();
+            //int totalCount = pAB.daily_prediction_metrics.Length;
+            int totalCount = 10;
+            double dailyMin = 0, dailyMax = 0;
+            for (int i= 0; i<totalCount/2;i++)
+            {
+                /*
+                string date = pAB.daily_prediction_metrics[i*2].service_date;
+                string threshold_name = pAB.daily_prediction_metrics[i*2].threshold_name;
+                double accuracy1 = Double.Parse(pAB.daily_prediction_metrics[i * 2].metric_result),
+                    accuracy2 = Double.Parse(pAB.daily_prediction_metrics[i * 2 + 1].metric_result);
+                dailyMin = accuracy2 * 5 /2;
+                dailyMax = (accuracy1 * 5 + accuracy2 * 10) / 2;
+                DailyAccuracy.Add(new DailyAccuracyModel
+                {
+                    Accuracy1 = accuracy1,
+                    Accuracy2 = accuracy2,
+                    MaxErr = dailyMax,
+                    MinErr = dailyMin,
+                    Date = date
+                });*/
+            }
+            List<double> ac1 = new List<double>()
+            {
+                0.3187, 0.3414, 0.2122, 0.4555, 0.1923, 0.4333, 0.1898, 0.2434, 0.2743, 0.4111
+            };
+            List<double> ac2 = new List<double>()
+            {
+                0.9812, 0.8414, 0.8584, 0.8766, 0.7272, 0.7433, 0.8998, 0.8134, 0.6743, 0.9111
+            };
+            for (int i=0;i<10;i++)
+            {
+                string date = DateTime.Now.AddDays(-(i + 1)).ToString("yyyy-MM-dd");
+                double accuracy1 = ac1[i], accuracy2 = ac2[i];
+                dailyMin = accuracy2 * 5 / 2;
+                dailyMax = (accuracy1 * 5 + accuracy2 * 10) / 2;
+                DailyAccuracy.Add(new DailyAccuracyModel
+                {
+                    Accuracy1 = accuracy1,
+                    Accuracy2 = accuracy2,
+                    MaxErr = dailyMax,
+                    MinErr = dailyMin,
+                    Date = date
+                });
+            }
+
+            Database.RouteAccuracyMap.Add(routeID, DailyAccuracy);
+            return DailyAccuracy;
         }
     }
 }

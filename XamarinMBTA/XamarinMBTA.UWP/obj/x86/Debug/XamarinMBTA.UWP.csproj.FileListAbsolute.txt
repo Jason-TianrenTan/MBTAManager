@@ -9,6 +9,7 @@ C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Core\XamarinMBTA.UWP.exe
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\XamarinMBTA.UWP.build.appxrecipe
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Plugin.Permissions.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\clrcompression.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Microsoft.CSharp.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Microsoft.VisualBasic.dll
@@ -173,6 +174,14 @@ C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\WindowsBase.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\mscorlib.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\netstandard.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Syncfusion.Licensing.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Syncfusion.Core.XForms.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Syncfusion.SfChart.UWP.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Syncfusion.SfChart.XForms.UWP.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Syncfusion.SfChart.XForms.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Plugin.LocalNotifications.Abstractions.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Plugin.LocalNotifications.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Plugin.LocalNotifications.pdb
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Xamarin.Essentials.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Xamarin.Forms.Core.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.dll
@@ -296,6 +305,9 @@ C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\qualifiers.txt
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\Plugin.Permissions.pri.xml
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\Syncfusion.SfChart.UWP.pri.xml
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\Plugin.LocalNotifications.pri.xml
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\Xamarin.Essentials.pri.xml
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.UWP\obj\x86\Debug\ProjectArchitectures.txt

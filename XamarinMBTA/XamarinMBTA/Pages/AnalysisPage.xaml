@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinMBTA.Pages.AnalysisPage"
+             xmlns:vm="clr-namespace:XamarinMBTA.ViewModels"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
+    <ContentPage.Content>
+        <chart:SfChart Title="Accuracy">
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis>
+                    <chart:CategoryAxis.Title>
+                        <chart:ChartAxisTitle Text="Date"/>
+                    </chart:CategoryAxis.Title>
+                </chart:CategoryAxis>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis
+                    Minimum="{Binding MinValue}"
+                    Maximum="{Binding MaxValue}">
+                    <chart:NumericalAxis.Title>
+                        <chart:ChartAxisTitle Text="Accuracy"></chart:ChartAxisTitle>
+                    </chart:NumericalAxis.Title>
+                </chart:NumericalAxis>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Series>
+
+                <chart:SplineAreaSeries 
+                    ItemsSource="{Binding AccuracyList}" 
+                    XBindingPath="Date" 
+                    YBindingPath="MaxErr">
+
+                </chart:SplineAreaSeries>
+
+                <chart:SplineAreaSeries 
+                    ItemsSource="{Binding AccuracyList}" 
+                    XBindingPath="Date" 
+                    YBindingPath="AverErr">
+
+                </chart:SplineAreaSeries>
+                
+                <chart:SplineAreaSeries 
+                    ItemsSource="{Binding AccuracyList}" 
+                    XBindingPath="Date" 
+                    YBindingPath="MinErr">
+
+                </chart:SplineAreaSeries>
+
+                
+
+            </chart:SfChart.Series>
+        </chart:SfChart>
+    </ContentPage.Content>
+</ContentPage>

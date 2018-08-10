@@ -1,11 +1,12 @@
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\bin\Debug\netstandard2.0\XamarinMBTA.deps.json
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\bin\Debug\netstandard2.0\XamarinMBTA.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\bin\Debug\netstandard2.0\XamarinMBTA.pdb
-C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\XamarinMBTA.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\AlertDetailPage.xaml.g.cs
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\AlertListPage.xaml.g.cs
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\AnalysisPage.xaml.g.cs
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\EventDetailPage.xaml.g.cs
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\LineSchedulePage.xaml.g.cs
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\MBTAPage.xaml.g.cs
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\ScheduleViewPage.xaml.g.cs
@@ -18,3 +19,5 @@ C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debu
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\XamarinMBTA.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\XamarinMBTA.pdb
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\XamarinMBTA.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA\obj\Debug\netstandard2.0\Pages\DisplayPDFPage.xaml.g.cs

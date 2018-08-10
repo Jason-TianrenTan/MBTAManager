@@ -11,6 +11,8 @@ using XamarinMBTA.Vehicle;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinMBTA.Globals;
+using Plugin.Permissions.Abstractions;
+using Plugin.Permissions;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace XamarinMBTA

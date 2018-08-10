@@ -31,6 +31,9 @@
     <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\newtonsoft.json\11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\plugin.permissions\3.0.0.12\lib\uap10.0.10240\Plugin.Permissions.dll">
+      <PackagePath>Plugin.Permissions.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.1\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
@@ -523,6 +526,27 @@
     <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.0.1\runtimes\win10-x86\lib\uap10.0.15138\netstandard.dll">
       <PackagePath>netstandard.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.licensing\16.2.0.42\lib\uap10.0\Syncfusion.Licensing.dll">
+      <PackagePath>Syncfusion.Licensing.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.core\16.2.0.42\lib\uap10.0\Syncfusion.Core.XForms.dll">
+      <PackagePath>Syncfusion.Core.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP.dll">
+      <PackagePath>Syncfusion.SfChart.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.XForms.UWP.dll">
+      <PackagePath>Syncfusion.SfChart.XForms.UWP.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.XForms.dll">
+      <PackagePath>Syncfusion.SfChart.XForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\xam.plugins.notifier\3.0.1-beta20\lib\UAP10\Plugin.LocalNotifications.Abstractions.dll">
+      <PackagePath>Plugin.LocalNotifications.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\xam.plugins.notifier\3.0.1-beta20\lib\UAP10\Plugin.LocalNotifications.dll">
+      <PackagePath>Plugin.LocalNotifications.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\xamarin.essentials\0.8.0-preview\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
     </AppxPackagedFile>
@@ -669,6 +693,54 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Syncfusion.SfChart.UWP.xr.xml">
+      <PackagePath>Syncfusion.SfChart.UWP\Syncfusion.SfChart.UWP.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\3D\ChartArea\Themes\SfChart3D.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\3D\ChartArea\Themes\SfChart3D.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\3D\ChartSeries\Themes\ChartSeries.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\3D\ChartSeries\Themes\ChartSeries.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\ChartArea\Themes\ChartArea.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\ChartArea\Themes\ChartArea.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\ChartAxis\Themes\ChartAxis.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\ChartAxis\Themes\ChartAxis.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\ChartSeries\Themes\ChartSeries.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\ChartSeries\Themes\ChartSeries.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Controls\Themes\ChartToolBar.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Controls\Themes\ChartToolBar.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Controls\Themes\ResizableScrollBar.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Controls\Themes\ResizableScrollBar.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Controls\Themes\Resizer.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Controls\Themes\Resizer.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Controls\Themes\SfRangeNavigator.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Controls\Themes\SfRangeNavigator.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Properties\Syncfusion.SfChart.UWP_2015.rd.xml">
+      <PackagePath>Syncfusion.SfChart.UWP\Properties\Syncfusion.SfChart.UWP_2015.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Sparkline\Themes\Sparkline.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Sparkline\Themes\Sparkline.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Themes\Generic.Common.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Themes\Generic.Common.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Themes\Generic.Legend.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Themes\Generic.Legend.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Themes\Generic.Symbol.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Themes\Generic.Symbol.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\syncfusion.xamarin.sfchart\16.2.0.42\lib\uap10.0\Syncfusion.SfChart.UWP\Themes\generic.xbf">
+      <PackagePath>Syncfusion.SfChart.UWP\Themes\generic.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\.nuget\packages\xamarin.forms\3.0.0.561731\lib\uap10.0\Xamarin.Forms.Platform.UAP\AutoSuggestStyle.xbf">
       <PackagePath>Xamarin.Forms.Platform.UAP\AutoSuggestStyle.xbf</PackagePath>

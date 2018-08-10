@@ -11,6 +11,83 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.CurrentActivity/2.1.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid44/Plugin.CurrentActivity.dll": {}
+        }
+      },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.CurrentActivity": "2.1.0.2",
+          "Xamarin.Android.Support.Compat": "25.4.0.2",
+          "Xamarin.Android.Support.Core.Utils": "25.4.0.2"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid71/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid71/Plugin.Permissions.dll": {}
+        }
+      },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/SlideOverKit.Droid.dll": {},
+          "lib/MonoAndroid10/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/SlideOverKit.Droid.dll": {},
+          "lib/MonoAndroid10/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Syncfusion.SfChart.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Syncfusion.SfChart.XForms.Android.dll": {},
+          "lib/MonoAndroid10/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -18,6 +95,53 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Android.Support.v4": "23.0.1.3"
+        },
+        "compile": {
+          "lib/MonoAndroid10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/MonoAndroid10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/MonoAndroid10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
@@ -485,6 +609,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -525,6 +655,174 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.11.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "Plugin.CurrentActivity/2.1.0.2": {
+      "sha512": "uiMbA0G1ulSEj7MtGUQDDhzw80+QgvH5ts+Yt9cyft1dF4Eb0tYxiXAgNPuohJXpxhZmRs+6ZjL6QBaL/wUKDQ==",
+      "type": "package",
+      "path": "plugin.currentactivity/2.1.0.2",
+      "files": [
+        "lib/monoandroid44/Plugin.CurrentActivity.dll",
+        "lib/monoandroid44/Plugin.CurrentActivity.xml",
+        "plugin.currentactivity.2.1.0.2.nupkg.sha512",
+        "plugin.currentactivity.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Plugin.Permissions/3.0.0.12": {
+      "sha512": "VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "type": "package",
+      "path": "plugin.permissions/3.0.0.12",
+      "files": [
+        "lib/monoandroid71/Plugin.Permissions.dll",
+        "lib/monoandroid71/Plugin.Permissions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.xml",
+        "lib/uap10.0.10240/Plugin.Permissions.dll",
+        "lib/uap10.0.10240/Plugin.Permissions.pri",
+        "lib/uap10.0.10240/Plugin.Permissions.xml",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.xml",
+        "plugin.permissions.3.0.0.12.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
+      ]
+    },
+    "SlideOverKit/2.1.6.1": {
+      "sha512": "hbvu4KK1H0vV1QzPNegapTIkjMEA+vyQ+AAiB0JTktSNbkcJWLWqfKm9Jkl6W2OIdgl3o0GEEWE/m5HzpI8esg==",
+      "type": "package",
+      "path": "slideoverkit/2.1.6.1",
+      "files": [
+        "lib/MonoAndroid10/SlideOverKit.Droid.dll",
+        "lib/MonoAndroid10/SlideOverKit.Droid.pdb",
+        "lib/MonoAndroid10/SlideOverKit.dll",
+        "lib/MonoAndroid10/SlideOverKit.pdb",
+        "lib/Xamarin.iOS10/SlideOverKit.dll",
+        "lib/Xamarin.iOS10/SlideOverKit.iOS.dll",
+        "lib/Xamarin.iOS10/SlideOverKit.iOS.pdb",
+        "lib/Xamarin.iOS10/SlideOverKit.pdb",
+        "lib/netstandard1.0/SlideOverKit.deps.json",
+        "lib/netstandard1.0/SlideOverKit.dll",
+        "lib/netstandard1.0/SlideOverKit.pdb",
+        "lib/netstandard2.0/SlideOverKit.deps.json",
+        "lib/netstandard2.0/SlideOverKit.dll",
+        "lib/netstandard2.0/SlideOverKit.pdb",
+        "lib/uap10.0/SlideOverKit.UWP.dll",
+        "lib/uap10.0/SlideOverKit.UWP.pdb",
+        "lib/uap10.0/SlideOverKit.UWP.pri",
+        "lib/uap10.0/SlideOverKit.dll",
+        "lib/uap10.0/SlideOverKit.pdb",
+        "slideoverkit.2.1.6.1.nupkg.sha512",
+        "slideoverkit.nuspec"
+      ]
+    },
+    "Syncfusion.Licensing/16.2.0.42": {
+      "sha512": "Bp1HNd2CciLLOoeATC2ybTNtXdRckshmhqpHTCDm4X1Xc0P0p+bkdZW9yGOvkF8s4xdepFTsgH2l7oxjLRiC9w==",
+      "type": "package",
+      "path": "syncfusion.licensing/16.2.0.42",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.16.2.0.42.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/16.2.0.42": {
+      "sha512": "xWHkgWz6uImcdUdKgRdFy2UPiHCfmVbp62plu3g6GcumpMRmVkZvaFS08kvptBMZdPZeOw1ofyMX9e3j/I52Dg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/16.2.0.42",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.xml",
+        "syncfusion.xamarin.core.16.2.0.42.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+      "sha512": "hfDmUQd3q1z4kpijvnVa+VkD56KK0MrzcIGTDm5Zh5lIN4zxU1JcjBlRNzEiWgExnI1AnLfRM+k0z5AMXUGvfw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfchart/16.2.0.42",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.macOS.dll",
+        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.SfChart.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.SfChart.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfChart.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfChart.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfChart.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfChart.UWP.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartArea/Themes/SfChart3D.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartArea/Themes/SfChart3D.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartSeries/Themes/ChartSeries.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartSeries/Themes/ChartSeries.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartArea/Themes/ChartArea.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartArea/Themes/ChartArea.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartAxis/Themes/ChartAxis.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartAxis/Themes/ChartAxis.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartSeries/Themes/ChartSeries.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartSeries/Themes/ChartSeries.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ChartToolBar.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ChartToolBar.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ResizableScrollBar.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ResizableScrollBar.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/Resizer.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/Resizer.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/SfRangeNavigator.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/SfRangeNavigator.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Properties/Syncfusion.SfChart.UWP_2015.rd.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Sparkline/Themes/Sparkline.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Sparkline/Themes/Sparkline.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Syncfusion.SfChart.UWP.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Syncfusion.SfChart.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Common.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Common.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Legend.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Legend.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Symbol.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Symbol.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/generic.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/generic.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfChart.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfChart.XForms.xml",
+        "syncfusion.xamarin.sfchart.16.2.0.42.nupkg.sha512",
+        "syncfusion.xamarin.sfchart.nuspec"
       ]
     },
     "System.Numerics.Vectors/4.5.0": {
@@ -571,6 +869,135 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Reactive/4.1.0-preview.84": {
+      "sha512": "Jjc/RDw3Wx6tc/Yg4fXgHETpcJqJ9dIkG6sI7k2uIWW1IFvOEy4oyTr6aUAOezzzDkxNn8b06OmAvASl5VYyPg==",
+      "type": "package",
+      "path": "system.reactive/4.1.0-preview.84",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/System.Reactive.dll",
+        "lib/net46/System.Reactive.xml",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "lib/uap10.0/System.Reactive.dll",
+        "lib/uap10.0/System.Reactive.pri",
+        "lib/uap10.0/System.Reactive.xml",
+        "system.reactive.4.1.0-preview.84.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    },
+    "System.Reactive.Linq/4.1.0-preview.84": {
+      "sha512": "OSDnLW4uSaq5RHUAoojBfihONMk0HrEC9fpAcuY3CZjRQZ1yLgYjoSugMfCvQc/hYliQy8gJeGpzEAb1ZpJdEg==",
+      "type": "package",
+      "path": "system.reactive.linq/4.1.0-preview.84",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/System.Reactive.Linq.dll",
+        "lib/net46/System.Reactive.Linq.xml",
+        "lib/netstandard2.0/System.Reactive.Linq.dll",
+        "lib/netstandard2.0/System.Reactive.Linq.xml",
+        "lib/uap10.0/System.Reactive.Linq.dll",
+        "lib/uap10.0/System.Reactive.Linq.pri",
+        "lib/uap10.0/System.Reactive.Linq.xml",
+        "system.reactive.linq.4.1.0-preview.84.nupkg.sha512",
+        "system.reactive.linq.nuspec"
+      ]
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "sha512": "J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "type": "package",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios1/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+        "system.runtime.interopservices.windowsruntime.nuspec"
+      ]
+    },
+    "Xam.Plugins.Notifier/3.0.1-beta20": {
+      "sha512": "dP5O4tFkEZOR7KGWuPb6gya/fzaPHzxA/zPAk1wNlgBVZ4GRJh9QGhbh7ZsW2DD5XxdeXeJT8Jv79PHmr5+FYA==",
+      "type": "package",
+      "path": "xam.plugins.notifier/3.0.1-beta20",
+      "files": [
+        "lib/MonoAndroid10/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.XML",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.dll",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.pdb",
+        "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/UAP10/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/UAP10/Plugin.LocalNotifications.XML",
+        "lib/UAP10/Plugin.LocalNotifications.dll",
+        "lib/UAP10/Plugin.LocalNotifications.pdb",
+        "lib/UAP10/Plugin.LocalNotifications.pri",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.dll",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.xml",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.XML",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.dll",
+        "lib/netstandard1.0/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.LocalNotifications.deps.json",
+        "lib/netstandard1.0/Plugin.LocalNotifications.dll",
+        "lib/netstandard1.0/Plugin.LocalNotifications.xml",
+        "xam.plugins.notifier.3.0.1-beta20.nupkg.sha512",
+        "xam.plugins.notifier.nuspec"
       ]
     },
     "Xamarin.Android.Arch.Core.Common/1.0.0.1": {
@@ -1097,6 +1524,10 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
+      "SlideOverKit >= 2.1.6.1",
+      "Syncfusion.Xamarin.Core >= 16.2.0.42",
+      "Syncfusion.Xamarin.SfChart >= 16.2.0.42",
+      "System.Reactive.Linq >= 4.1.0-preview.84",
       "Xamarin.Android.Support.Annotations >= 27.0.2.1",
       "Xamarin.Android.Support.Compat >= 27.0.2.1",
       "Xamarin.Android.Support.Core.UI >= 27.0.2.1",
@@ -1136,7 +1567,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {}
       },
       "frameworks": {
         "monoandroid81": {
@@ -1151,6 +1583,22 @@
     "frameworks": {
       "monoandroid81": {
         "dependencies": {
+          "SlideOverKit": {
+            "target": "Package",
+            "version": "[2.1.6.1, )"
+          },
+          "Syncfusion.Xamarin.Core": {
+            "target": "Package",
+            "version": "[16.2.0.42, )"
+          },
+          "Syncfusion.Xamarin.SfChart": {
+            "target": "Package",
+            "version": "[16.2.0.42, )"
+          },
+          "System.Reactive.Linq": {
+            "target": "Package",
+            "version": "[4.1.0-preview.84, )"
+          },
           "Xamarin.Android.Support.Annotations": {
             "target": "Package",
             "version": "[27.0.2.1, )"

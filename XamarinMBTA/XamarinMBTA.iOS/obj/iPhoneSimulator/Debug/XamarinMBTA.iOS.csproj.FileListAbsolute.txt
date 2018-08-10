@@ -1,6 +1,13 @@
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\XamarinMBTA.iOS.exe
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\XamarinMBTA.iOS.pdb
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Plugin.Permissions.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Syncfusion.Licensing.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Syncfusion.Core.XForms.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfChart.XForms.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Syncfusion.SfChart.XForms.iOS.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.Abstractions.dll
+C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Plugin.LocalNotifications.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Xamarin.Essentials.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
 C:\Users\Administrator\source\repos\XamarinMBTA\XamarinMBTA\XamarinMBTA.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb

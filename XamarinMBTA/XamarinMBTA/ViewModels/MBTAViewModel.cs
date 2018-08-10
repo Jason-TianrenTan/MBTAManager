@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
+using XamarinMBTA.Events;
 using XamarinMBTA.Globals;
 
 namespace XamarinMBTA.ViewModels

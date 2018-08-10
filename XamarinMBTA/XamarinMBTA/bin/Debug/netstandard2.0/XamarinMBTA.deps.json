@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "ed0a612cb8e98e94f806cfe5978317dfcd263b16"
+    "signature": "1971771c22f4adcae56116619b6e818978a5191f"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,6 +11,12 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -20,6 +26,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -30,9 +37,78 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.Permissions.dll": {}
+        }
+      },
+      "SlideOverKit/2.1.6.1": {
+        "runtime": {
+          "lib/netstandard2.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "3.0.0.561731"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "runtime": {
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "dependencies": {
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "runtime": {
+          "lib/netstandard1.0/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -73,6 +149,13 @@
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
     "NETStandard.Library/2.0.3": {
       "type": "package",
       "serviceable": true,
@@ -87,12 +170,82 @@
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
+    "Plugin.Permissions/3.0.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "path": "plugin.permissions/3.0.0.12",
+      "hashPath": "plugin.permissions.3.0.0.12.nupkg.sha512"
+    },
+    "SlideOverKit/2.1.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hbvu4KK1H0vV1QzPNegapTIkjMEA+vyQ+AAiB0JTktSNbkcJWLWqfKm9Jkl6W2OIdgl3o0GEEWE/m5HzpI8esg==",
+      "path": "slideoverkit/2.1.6.1",
+      "hashPath": "slideoverkit.2.1.6.1.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/16.2.0.42": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bp1HNd2CciLLOoeATC2ybTNtXdRckshmhqpHTCDm4X1Xc0P0p+bkdZW9yGOvkF8s4xdepFTsgH2l7oxjLRiC9w==",
+      "path": "syncfusion.licensing/16.2.0.42",
+      "hashPath": "syncfusion.licensing.16.2.0.42.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/16.2.0.42": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xWHkgWz6uImcdUdKgRdFy2UPiHCfmVbp62plu3g6GcumpMRmVkZvaFS08kvptBMZdPZeOw1ofyMX9e3j/I52Dg==",
+      "path": "syncfusion.xamarin.core/16.2.0.42",
+      "hashPath": "syncfusion.xamarin.core.16.2.0.42.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hfDmUQd3q1z4kpijvnVa+VkD56KK0MrzcIGTDm5Zh5lIN4zxU1JcjBlRNzEiWgExnI1AnLfRM+k0z5AMXUGvfw==",
+      "path": "syncfusion.xamarin.sfchart/16.2.0.42",
+      "hashPath": "syncfusion.xamarin.sfchart.16.2.0.42.nupkg.sha512"
+    },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-MNcaYxUJvUcoXOa+jgKl/GDw/Mh+wMrxDjW4dre7qrp35LUGTjUBNtZsNjxsWX592ocdyqt1X5hMJB+5OStoYw==",
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "System.Reactive/4.1.0-preview.84": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jjc/RDw3Wx6tc/Yg4fXgHETpcJqJ9dIkG6sI7k2uIWW1IFvOEy4oyTr6aUAOezzzDkxNn8b06OmAvASl5VYyPg==",
+      "path": "system.reactive/4.1.0-preview.84",
+      "hashPath": "system.reactive.4.1.0-preview.84.nupkg.sha512"
+    },
+    "System.Reactive.Linq/4.1.0-preview.84": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OSDnLW4uSaq5RHUAoojBfihONMk0HrEC9fpAcuY3CZjRQZ1yLgYjoSugMfCvQc/hYliQy8gJeGpzEAb1ZpJdEg==",
+      "path": "system.reactive.linq/4.1.0-preview.84",
+      "hashPath": "system.reactive.linq.4.1.0-preview.84.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
+    },
+    "Xam.Plugins.Notifier/3.0.1-beta20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dP5O4tFkEZOR7KGWuPb6gya/fzaPHzxA/zPAk1wNlgBVZ4GRJh9QGhbh7ZsW2DD5XxdeXeJT8Jv79PHmr5+FYA==",
+      "path": "xam.plugins.notifier/3.0.1-beta20",
+      "hashPath": "xam.plugins.notifier.3.0.1-beta20.nupkg.sha512"
     },
     "Xamarin.Essentials/0.8.0-preview": {
       "type": "package",

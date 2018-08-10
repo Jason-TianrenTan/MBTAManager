@@ -243,6 +243,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -264,6 +276,56 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -271,6 +333,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -328,6 +426,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -583,6 +687,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -777,6 +893,56 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -784,6 +950,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -841,6 +1043,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -1096,6 +1304,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
         "type": "package",
         "compile": {
@@ -1291,6 +1511,56 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -1298,6 +1568,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -1355,6 +1661,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -1609,6 +1921,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -1630,6 +1954,56 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -1637,6 +2011,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -1694,6 +2104,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -1949,6 +2365,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -2143,6 +2571,56 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -2150,6 +2628,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -2207,6 +2721,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -2462,6 +2982,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -2657,6 +3189,56 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -2664,6 +3246,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -2721,6 +3339,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -2976,6 +3600,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -3170,6 +3806,56 @@
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -3177,6 +3863,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -3234,6 +3956,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -3489,6 +4217,18 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Permissions/3.0.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3"
+        },
+        "compile": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.10240/Plugin.Permissions.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
         "type": "package",
         "build": {
@@ -3684,6 +4424,56 @@
           "build/_._": {}
         }
       },
+      "SlideOverKit/2.1.6.1": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/SlideOverKit.UWP.dll": {},
+          "lib/uap10.0/SlideOverKit.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/16.2.0.42": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.Core/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "16.2.0.42",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Xamarin.Forms": "2.4.0.280"
+        },
+        "compile": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Syncfusion.SfChart.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll": {},
+          "lib/uap10.0/Syncfusion.SfChart.XForms.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -3691,6 +4481,42 @@
         },
         "runtime": {
           "lib/uap10.0.16299/_._": {}
+        }
+      },
+      "System.Reactive/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8"
+        },
+        "compile": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0.16299/System.Reactive.dll": {}
+        }
+      },
+      "System.Reactive.Linq/4.1.0-preview.84": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+          "System.Reactive": "4.1.0-preview.84"
+        },
+        "compile": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Xam.Plugins.Notifier/3.0.1-beta20": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll": {},
+          "lib/UAP10/Plugin.LocalNotifications.dll": {}
         }
       },
       "Xamarin.Essentials/0.8.0-preview": {
@@ -3748,6 +4574,12 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
+          "Plugin.Permissions": "3.0.0.12",
+          "SlideOverKit": "2.1.6.1",
+          "Syncfusion.Xamarin.Core": "16.2.0.42",
+          "Syncfusion.Xamarin.SfChart": "16.2.0.42",
+          "System.Reactive.Linq": "4.1.0-preview.84",
+          "Xam.Plugins.Notifier": "3.0.1-beta20",
           "Xamarin.Essentials": "0.8.0-preview",
           "Xamarin.Forms": "3.0.0.561731",
           "Xamarin.Forms.GoogleMaps": "3.0.0"
@@ -6179,6 +7011,27 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "Plugin.Permissions/3.0.0.12": {
+      "sha512": "VrYqI/ufk3bH6gTP1JJlLByjhS0CHu3riKmdozhX9/qXA9hlvLolmcqKJdyAqpzmrVC74m3ZtirUBIrBxvT1Lw==",
+      "type": "package",
+      "path": "plugin.permissions/3.0.0.12",
+      "files": [
+        "lib/monoandroid71/Plugin.Permissions.dll",
+        "lib/monoandroid71/Plugin.Permissions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.xml",
+        "lib/uap10.0.10240/Plugin.Permissions.dll",
+        "lib/uap10.0.10240/Plugin.Permissions.pri",
+        "lib/uap10.0.10240/Plugin.Permissions.xml",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.xml",
+        "plugin.permissions.3.0.0.12.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
+      ]
+    },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
       "sha512": "ZGShwJB9yNwHyM+w7g8int9gmurykzvy+SWv74+lCul0ddTmtI9WhXrAg3Dyub9urV7/lUtUjCjH+cSC5/5t7A==",
       "type": "package",
@@ -7286,6 +8139,141 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
+    "SlideOverKit/2.1.6.1": {
+      "sha512": "hbvu4KK1H0vV1QzPNegapTIkjMEA+vyQ+AAiB0JTktSNbkcJWLWqfKm9Jkl6W2OIdgl3o0GEEWE/m5HzpI8esg==",
+      "type": "package",
+      "path": "slideoverkit/2.1.6.1",
+      "files": [
+        "lib/MonoAndroid10/SlideOverKit.Droid.dll",
+        "lib/MonoAndroid10/SlideOverKit.Droid.pdb",
+        "lib/MonoAndroid10/SlideOverKit.dll",
+        "lib/MonoAndroid10/SlideOverKit.pdb",
+        "lib/Xamarin.iOS10/SlideOverKit.dll",
+        "lib/Xamarin.iOS10/SlideOverKit.iOS.dll",
+        "lib/Xamarin.iOS10/SlideOverKit.iOS.pdb",
+        "lib/Xamarin.iOS10/SlideOverKit.pdb",
+        "lib/netstandard1.0/SlideOverKit.deps.json",
+        "lib/netstandard1.0/SlideOverKit.dll",
+        "lib/netstandard1.0/SlideOverKit.pdb",
+        "lib/netstandard2.0/SlideOverKit.deps.json",
+        "lib/netstandard2.0/SlideOverKit.dll",
+        "lib/netstandard2.0/SlideOverKit.pdb",
+        "lib/uap10.0/SlideOverKit.UWP.dll",
+        "lib/uap10.0/SlideOverKit.UWP.pdb",
+        "lib/uap10.0/SlideOverKit.UWP.pri",
+        "lib/uap10.0/SlideOverKit.dll",
+        "lib/uap10.0/SlideOverKit.pdb",
+        "slideoverkit.2.1.6.1.nupkg.sha512",
+        "slideoverkit.nuspec"
+      ]
+    },
+    "Syncfusion.Licensing/16.2.0.42": {
+      "sha512": "Bp1HNd2CciLLOoeATC2ybTNtXdRckshmhqpHTCDm4X1Xc0P0p+bkdZW9yGOvkF8s4xdepFTsgH2l7oxjLRiC9w==",
+      "type": "package",
+      "path": "syncfusion.licensing/16.2.0.42",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net20/Syncfusion.Licensing.dll",
+        "lib/net35/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net451/Syncfusion.Licensing.dll",
+        "lib/net46/Syncfusion.Licensing.dll",
+        "lib/netstandard1.0/Syncfusion.Licensing.dll",
+        "lib/netstandard1.4/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.16.2.0.42.nupkg.sha512",
+        "syncfusion.licensing.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.Core/16.2.0.42": {
+      "sha512": "xWHkgWz6uImcdUdKgRdFy2UPiHCfmVbp62plu3g6GcumpMRmVkZvaFS08kvptBMZdPZeOw1ofyMX9e3j/I52Dg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.core/16.2.0.42",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.macOS.dll",
+        "lib/Xamarin.Mac/Syncfusion.Core.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Core.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.Core.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Core.XForms.xml",
+        "lib/uap10.0/Syncfusion.Core.XForms.dll",
+        "lib/uap10.0/Syncfusion.Core.XForms.xml",
+        "syncfusion.xamarin.core.16.2.0.42.nupkg.sha512",
+        "syncfusion.xamarin.core.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfChart/16.2.0.42": {
+      "sha512": "hfDmUQd3q1z4kpijvnVa+VkD56KK0MrzcIGTDm5Zh5lIN4zxU1JcjBlRNzEiWgExnI1AnLfRM+k0z5AMXUGvfw==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfchart/16.2.0.42",
+      "files": [
+        ".signature.p7s",
+        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.Android.dll",
+        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.dll",
+        "lib/MonoAndroid10/Syncfusion.SfChart.XForms.xml",
+        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.dll",
+        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.macOS.dll",
+        "lib/Xamarin.Mac/Syncfusion.SfChart.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfChart.XForms.xml",
+        "lib/netstandard1.0/Syncfusion.SfChart.XForms.dll",
+        "lib/netstandard1.0/Syncfusion.SfChart.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfChart.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfChart.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfChart.UWP.pri",
+        "lib/uap10.0/Syncfusion.SfChart.UWP.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartArea/Themes/SfChart3D.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartArea/Themes/SfChart3D.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartSeries/Themes/ChartSeries.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/3D/ChartSeries/Themes/ChartSeries.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartArea/Themes/ChartArea.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartArea/Themes/ChartArea.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartAxis/Themes/ChartAxis.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartAxis/Themes/ChartAxis.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartSeries/Themes/ChartSeries.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/ChartSeries/Themes/ChartSeries.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ChartToolBar.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ChartToolBar.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ResizableScrollBar.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/ResizableScrollBar.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/Resizer.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/Resizer.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/SfRangeNavigator.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Controls/Themes/SfRangeNavigator.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Properties/Syncfusion.SfChart.UWP_2015.rd.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Sparkline/Themes/Sparkline.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Sparkline/Themes/Sparkline.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Syncfusion.SfChart.UWP.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Syncfusion.SfChart.UWP.xr.xml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Common.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Common.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Legend.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Legend.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Symbol.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/Generic.Symbol.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/generic.xaml",
+        "lib/uap10.0/Syncfusion.SfChart.UWP/Themes/generic.xbf",
+        "lib/uap10.0/Syncfusion.SfChart.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfChart.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfChart.XForms.xml",
+        "syncfusion.xamarin.sfchart.16.2.0.42.nupkg.sha512",
+        "syncfusion.xamarin.sfchart.nuspec"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "MNcaYxUJvUcoXOa+jgKl/GDw/Mh+wMrxDjW4dre7qrp35LUGTjUBNtZsNjxsWX592ocdyqt1X5hMJB+5OStoYw==",
       "type": "package",
@@ -7330,6 +8318,76 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Reactive/4.1.0-preview.84": {
+      "sha512": "Jjc/RDw3Wx6tc/Yg4fXgHETpcJqJ9dIkG6sI7k2uIWW1IFvOEy4oyTr6aUAOezzzDkxNn8b06OmAvASl5VYyPg==",
+      "type": "package",
+      "path": "system.reactive/4.1.0-preview.84",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/System.Reactive.dll",
+        "lib/net46/System.Reactive.xml",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "lib/uap10.0/System.Reactive.dll",
+        "lib/uap10.0/System.Reactive.pri",
+        "lib/uap10.0/System.Reactive.xml",
+        "system.reactive.4.1.0-preview.84.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    },
+    "System.Reactive.Linq/4.1.0-preview.84": {
+      "sha512": "OSDnLW4uSaq5RHUAoojBfihONMk0HrEC9fpAcuY3CZjRQZ1yLgYjoSugMfCvQc/hYliQy8gJeGpzEAb1ZpJdEg==",
+      "type": "package",
+      "path": "system.reactive.linq/4.1.0-preview.84",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/System.Reactive.Linq.dll",
+        "lib/net46/System.Reactive.Linq.xml",
+        "lib/netstandard2.0/System.Reactive.Linq.dll",
+        "lib/netstandard2.0/System.Reactive.Linq.xml",
+        "lib/uap10.0/System.Reactive.Linq.dll",
+        "lib/uap10.0/System.Reactive.Linq.pri",
+        "lib/uap10.0/System.Reactive.Linq.xml",
+        "system.reactive.linq.4.1.0-preview.84.nupkg.sha512",
+        "system.reactive.linq.nuspec"
+      ]
+    },
+    "Xam.Plugins.Notifier/3.0.1-beta20": {
+      "sha512": "dP5O4tFkEZOR7KGWuPb6gya/fzaPHzxA/zPAk1wNlgBVZ4GRJh9QGhbh7ZsW2DD5XxdeXeJT8Jv79PHmr5+FYA==",
+      "type": "package",
+      "path": "xam.plugins.notifier/3.0.1-beta20",
+      "files": [
+        "lib/MonoAndroid10/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.XML",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.dll",
+        "lib/MonoAndroid10/Plugin.LocalNotifications.pdb",
+        "lib/UAP10/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/UAP10/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/UAP10/Plugin.LocalNotifications.XML",
+        "lib/UAP10/Plugin.LocalNotifications.dll",
+        "lib/UAP10/Plugin.LocalNotifications.pdb",
+        "lib/UAP10/Plugin.LocalNotifications.pri",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.dll",
+        "lib/Xamarin.Mac20/Plugin.LocalNotifications.xml",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.XML",
+        "lib/Xamarin.iOS10/Plugin.LocalNotifications.dll",
+        "lib/netstandard1.0/Plugin.LocalNotifications.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.LocalNotifications.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.LocalNotifications.deps.json",
+        "lib/netstandard1.0/Plugin.LocalNotifications.dll",
+        "lib/netstandard1.0/Plugin.LocalNotifications.xml",
+        "xam.plugins.notifier.3.0.1-beta20.nupkg.sha512",
+        "xam.plugins.notifier.nuspec"
       ]
     },
     "Xamarin.Essentials/0.8.0-preview": {
@@ -7528,6 +8586,10 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.16299": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.1",
+      "SlideOverKit >= 2.1.6.1",
+      "Syncfusion.Xamarin.Core >= 16.2.0.42",
+      "Syncfusion.Xamarin.SfChart >= 16.2.0.42",
+      "System.Reactive.Linq >= 4.1.0-preview.84",
       "Xamarin.Forms >= 3.0.0.561731",
       "XamarinMBTA >= 1.0.0"
     ]
@@ -7558,7 +8620,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {}
       },
       "frameworks": {
         "uap10.0.16299": {
@@ -7576,6 +8639,22 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "SlideOverKit": {
+            "target": "Package",
+            "version": "[2.1.6.1, )"
+          },
+          "Syncfusion.Xamarin.Core": {
+            "target": "Package",
+            "version": "[16.2.0.42, )"
+          },
+          "Syncfusion.Xamarin.SfChart": {
+            "target": "Package",
+            "version": "[16.2.0.42, )"
+          },
+          "System.Reactive.Linq": {
+            "target": "Package",
+            "version": "[4.1.0-preview.84, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
@@ -7614,6 +8693,23 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Microsoft.NETCore.UniversalWindowsPlatform from 6.0.8 to 6.0.1. Reference the package directly from the project to select a different version. \r\n XamarinMBTA.UWP -> System.Reactive.Linq 4.1.0-preview.84 -> Microsoft.NETCore.UniversalWindowsPlatform (>= 6.0.8) \r\n XamarinMBTA.UWP -> Microsoft.NETCore.UniversalWindowsPlatform (>= 6.0.1)",
+      "libraryId": "Microsoft.NETCore.UniversalWindowsPlatform",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    },
     {
       "code": "NU1605",
       "level": "Warning",

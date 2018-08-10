@@ -1,5 +1,13 @@
 FormsViewGroup
 Newtonsoft.Json
+Plugin.CurrentActivity
+Plugin.LocalNotifications.Abstractions
+Plugin.LocalNotifications
+Plugin.Permissions
+Syncfusion.Core.XForms
+Syncfusion.Licensing
+Syncfusion.SfChart.XForms.Android
+Syncfusion.SfChart.XForms
 System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
@@ -34,3 +42,10 @@ Xamarin.GooglePlayServices.Maps
 Xamarin.GooglePlayServices.Tasks
 XamarinMBTA
 netstandard
+System.Resources.ResourceManager
+System.Reflection.Extensions
+SlideOverKit
+SlideOverKit.Droid
+System.Reactive
+System.Reactive.Linq
+System.Runtime.InteropServices.WindowsRuntime

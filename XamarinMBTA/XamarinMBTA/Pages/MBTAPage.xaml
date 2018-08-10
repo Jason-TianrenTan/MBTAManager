@@ -129,7 +129,7 @@
                                          Grid.Column="0">
                                 <Label
                                    x:Name="UpcomingScheduleLabel"
-                                   Text="Go to Charlie's"
+                                   Text="Planning Test"
                                    Margin="10, 0, 0, 0"
                                    FontSize="20"
                                    TextColor="Black"
@@ -138,7 +138,7 @@
                                    VerticalTextAlignment="Center"
                                    HorizontalOptions="FillAndExpand"/>
                                 <Label
-                                   Text="2018-07-24 12:07A" TextColor="LightGreen"
+                                   Text="2018-08-04 09:00A" TextColor="LightGreen"
                                    FontSize="14"
                                    VerticalOptions="Center"
                                    HorizontalOptions="Center"

@@ -211,6 +211,7 @@ namespace XamarinMBTA.ViewModels
                 Station start_st = stationList[0], final_st = stationList[stationList.Count - 1];
                 RouteDirection.start_station = start_st.attributes.name;
                 RouteDirection.final_station = final_st.attributes.name;
+
                 foreach (Station station in stationList)
                     StationList.Add(station.attributes.name);
                 
